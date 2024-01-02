@@ -163,10 +163,8 @@
 
 .cell {
     border: 1px solid var(--cell_border_color);
-    display: flex;
-    width: 5rem;
+    min-width: 5rem;
     height: 2rem;
-    flex-shrink: 0;
     outline: none
 }
 
