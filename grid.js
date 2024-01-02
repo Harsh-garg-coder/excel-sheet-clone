@@ -47,6 +47,10 @@ function createCells() {
             cell.setAttribute("contenteditable", "true");
             cell.addEventListener("click", () => handleCellClick(cell, i, j));
     
+            cell.setAttribute("rowId", i);
+            cell.setAttribute("colId", j);
+            cell.setAttribute("spellcheck", false);
+
             row.append(cell);
         }
     
@@ -54,7 +58,13 @@ function createCells() {
     }
 }
 
+function selectFirstCellByDefault() {
+    const cell = document.querySelector(".cell");
+    cell.click();
+}
+
 createAddressBars();
 createCells();
+selectFirstCellByDefault();
 
 
